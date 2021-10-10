@@ -4,8 +4,7 @@
   "description": "Connect4 made to be used in README.md ",
   "main": "main.ts",
   "scripts": {
-    "start": "nodemon ./app/index.ts",
-    "build": "tsc --project ./"
+    "start": "nodemon ./app/index.ts"
   },
   "repository": {
     "type": "git",
