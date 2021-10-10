@@ -1,7 +1,7 @@
 # Connect4
 A simple asynchronous Connect Four made for GitHub readme.
 
-![screenshot](https://github.com/kozennnn/connect4/public/images/screen.png)
+![screenshot](https://github.com/kozennnn/connect4/blob/master/public/images/screen.png)
 
 ## Installation
 
