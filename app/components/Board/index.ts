@@ -9,7 +9,7 @@ async function draw(req: Request) {
     const context = canvas.getContext("2d");
 
 
-    const image = await loadImage("http://localhost:3000/images/grid.png");
+    const image = await loadImage("https://kozennnn-connect-four.herokuapp.com/images/grid.png");
 
 
     context.drawImage(image, 0, 0);
@@ -26,10 +26,10 @@ async function draw(req: Request) {
                 if(grid[y][x])
                     switch (grid[y][x].color) {
                         case 0:
-                            context.drawImage(await loadImage("http://localhost:3000/images/red.png"), 5 + (x * 58), 48 + (y * 58));
+                            context.drawImage(await loadImage("https://kozennnn-connect-four.herokuapp.com/images/red.png"), 5 + (x * 58), 48 + (y * 58));
                             break;
                         case 1:
-                            context.drawImage(await loadImage("http://localhost:3000/images/yellow.png"), 5 + (x * 58), 48 + (y * 58));
+                            context.drawImage(await loadImage("https://kozennnn-connect-four.herokuapp.com/images/yellow.png"), 5 + (x * 58), 48 + (y * 58));
                             break;
                     }
             }
