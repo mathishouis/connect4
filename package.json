@@ -1,0 +1,31 @@
+{
+  "name": "connect4",
+  "version": "1.0.0",
+  "description": "Connect4 made to be used in README.md ",
+  "main": "main.ts",
+  "scripts": {
+    "start": "nodemon ./app/index.ts",
+    "build": "tsc --project ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kozennnn/connect4.git"
+  },
+  "author": "Mathis HOUIS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kozennnn/connect4/issues"
+  },
+  "homepage": "https://github.com/kozennnn/connect4#readme",
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "canvas": "^2.8.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^15.0.1",
+    "typescript": "^4.2.4"
+  }
+}
