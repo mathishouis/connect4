@@ -12,6 +12,6 @@ console.log(grid.grid);
 app.locals.grid = grid;
 app.locals.round = 0;
 
-app.listen(8081, () => {
-    console.log(`⚡️[server]: Server is running at https://localhost:${8081}`);
+app.listen(3000, () => {
+    console.log(`⚡️[server]: Server is running at https://localhost:${3000}`);
 });
