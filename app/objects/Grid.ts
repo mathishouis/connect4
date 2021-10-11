@@ -61,7 +61,7 @@ export default class Grid {
             }
         }
         // check diagonally (top left to bottom right);
-        count = 0;
+        count = 1;
         let y = 0;
         for (let x = pawn.x - pawn.y; x <= this.__width - pawn.x - pawn.y; x++) {
             if(Math.sign(x) != -1) {
@@ -71,17 +71,17 @@ export default class Grid {
                         console.log("count: " + count);
                         if(count >= 4) return true;
                     } else {
-                        count = 0;
+                        count = 1;
                     }
                 } else {
-                    count = 0;
+                    count = 1;
                 }
             }
             y++;
         }
 
         // check diagonally (top right to bottom left);
-        count = 0;
+        /*count = 0;
         y = 0;
         for (let x = pawn.x + pawn.y; x > 0; x--) {
             if(x <= this.__width) {
@@ -97,6 +97,26 @@ export default class Grid {
                 }
             }
             console.log("x: " + x + " y: " + y);
+            y++;
+        }*/
+        // check diagonally (top right to bottom left);
+        count = 1;
+        y = 0;
+        for (let x = pawn.x + pawn.y; x >= 0; x--) {
+            if(x <= this.__width) {
+                if(this.__grid[y-1] != undefined && this.__grid[y-1][x+1] != undefined) {
+                    if(this.__grid[y-1][x+1].color == pawn.color) {
+                        count++;
+                        console.log("x: " + x + " y: " + y);
+                        if(count >= 4) return true;
+                    } else {
+                        count = 1;
+                    }
+                } else {
+                    count = 1;
+                }
+            }
+
             y++;
         }
         return false;

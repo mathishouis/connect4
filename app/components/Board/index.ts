@@ -16,6 +16,12 @@ async function draw(req: Request) {
 
     let grid: Pawn[][] = [[]]
 
+    if(req.app.locals.round == 0) {
+        context.drawImage(await loadImage("http://localhost:3000/images/red.png"), 11, 11, 20, 20);
+    } else {
+        context.drawImage(await loadImage("http://localhost:3000/images/yellow.png"), 0, 0, 16, 16);
+    }
+
     for(let y = 0; y < req.app.locals.grid.grid.length; y++) {
         grid[y] = req.app.locals.grid.grid[y];
         for(let x = 0; x < req.app.locals.grid.grid[y].length; x++) {
