@@ -8,5 +8,5 @@ RUN npm install
 
 COPY . /usr/src/api
 
-EXPOSE 3069
+EXPOSE 3000
 CMD npm run start
